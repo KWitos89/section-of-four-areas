@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+:root {
+  --color-primary-dark-blue: rgba(15, 22, 45, 1);
+  --color-primary-violt: rgba(108, 124, 255, 1);
+  --color-primary-purple: rgba(202, 89, 255, 1);
+  --color-primary-turquoise: rgba(42, 255, 255, 1);
+  --color-primary-yellow: rgba(255, 246, 41, 1);
+  --color-secondary-white: rgba(255, 255, 255, 1);
+  --color-secondary-graphite: rgba(39, 45, 66, 1);
+  --color-secondary-black: rgba(0, 0, 0, 1);
+  --bg-violt: rgba(44, 52, 85, 1);
+  --bg-purple: rgba(55, 49, 85, 1);
+  --bg-turquoise: rgba(39, 66, 85, 1);
+  --bg-yellow: rgba(61, 65, 63, 1);
+  --fs-h1:2rem;
+  --fs-h1-3:3rem;
+  --fs-h2: 20px;
+  --fs-text: 16px;
+  --fs-text-small: 14px;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --ff: "DM Sans", sans-serif;
+  --screen-samll: 23.4375;
+  --screen-medium: 48em;
+  --screen-large: 64em;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--color-primary-dark-blue);
+  color: var(--color-secondary-white);
+  font-family: var(--ff);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(var(--color-primary-blue) 0%, var(--color-primary-purple) 25%, var(--color-primary-yellow) 100%);
+  border-radius: 6px;
+  background-color: black;
+  height: 40px;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-medium);
+  line-height: 40px;
+  letter-spacing: -0.2%;
+}
+@media (min-width: 40em) {
+  h1 {
+    line-height: 56px;
+    font-size: var(--fs-h1-3);
+  }
+}
+
+h2 {
+  font-size: var(--fs--h2);
+  font-weight: var(--fw-medium);
+  line-height: 20px;
+}
+
+p {
+  font-size: var(--fs-text);
+  font-weight: var(--fw-regular);
+  line-height: 24px;
+}
+
+.card__text {
+  font-size: var(--fs-text-small);
+  line-height: 22px;
+  opacity: 0.5;
+}
+@media (min-width: 64em) {
+  .card__text {
+    font-size: var(--fs-text);
+    line-height: 24px;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 90em;
+  width: calc(100% - 2rem);
+}
+@media (min-width: 48em) {
+  .container {
+    width: calc(100% - 21.125rem);
+  }
+}
+@media (min-width: 64em) {
+  .container {
+    width: calc(100% - 19rem);
+  }
+}
+
+.card {
+  background-color: var(--color-secondary-graphite);
+  border-radius: 20px;
+  display: grid;
+  padding-block: 20px;
+  place-items: center;
+  row-gap: 16px;
+  text-align: center;
+  width: 343px;
+}
+@media (min-width: 40em) {
+  .card {
+    width: 240px;
+  }
+}
+@media (min-width: 64em) {
+  .card {
+    padding-block: 24px;
+    width: 268px;
+  }
+}
+.card__box-img {
+  aspect-ratio: 1/1;
+  align-items: center;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  width: 56px;
+}
+.card__text {
+  max-width: 303px;
+  width: calc(100% - 2vw);
+}
+
+.card:nth-child(1) .card__box-img {
+  background-color: var(--bg-purple);
+}
+
+.card:nth-child(2) .card__box-img {
+  background-color: var(--bg-violt);
+}
+
+.card:nth-child(3) .card__box-img {
+  background-color: var(--bg-turquoise);
+}
+
+.card:nth-child(4) .card__box-img {
+  background-color: var(--bg-yellow);
+}
+
+.home-page {
+  display: grid;
+  gap: 24px;
+  padding-block: 48px 64px;
+  place-content: center;
+}
+@media (min-width: 40em) {
+  .home-page {
+    height: 100vh;
+    place-items: center;
+  }
+}
+@media (min-width: 75em) {
+  .home-page {
+    -moz-column-gap: 109px;
+         column-gap: 109px;
+    grid-template-columns: repeat(2, max-content);
+    place-items: center;
+  }
+}
+.home-page__content {
+  display: grid;
+  place-self: start;
+  row-gap: 16px;
+  width: 343px;
+}
+@media (min-width: 40em) {
+  .home-page__content {
+    width: 496px;
+  }
+}
+.home-page__cards {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 40em) {
+  .home-page__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 64em) {
+  .home-page__cards {
+    gap: 31px;
+  }
+}/*# sourceMappingURL=style.css.map */

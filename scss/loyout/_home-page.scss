@@ -1,0 +1,41 @@
+.home-page {
+    display: grid;
+    gap: 24px;
+    padding-block: 48px 64px;
+    place-content: center;
+
+      @media(min-width:40em) {
+        height: 100vh;
+        place-items: center;
+    }
+
+    @media(min-width:75em) {
+        column-gap: 109px;
+        grid-template-columns: repeat(2, max-content);
+        place-items: center;
+    }
+
+    &__content {
+        display: grid;
+        place-self: start;
+        row-gap: 16px;
+        width: 343px;
+
+        @media (min-width:40em) {
+            width: 496px;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        gap: 16px;
+
+        @media(min-width: 40em) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media(min-width: 64em) {
+            gap: 31px;
+        }
+    }
+}

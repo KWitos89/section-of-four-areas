@@ -1,0 +1,34 @@
+h1{
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-medium);
+    line-height: 40px;
+    letter-spacing: -0.2%;
+
+    @media (min-width:40em) {
+        line-height: 56px;
+        font-size: var(--fs-h1-3);
+    }
+}
+
+h2{
+    font-size: var(--fs--h2);
+    font-weight: var(--fw-medium);
+    line-height: 20px;
+}
+
+p{
+    font-size: var(--fs-text);
+    font-weight: var(--fw-regular);
+    line-height: 24px;
+}
+
+.card__text{
+    font-size: var(--fs-text-small);
+    line-height: 22px;
+    opacity: .5;
+
+    @media(min-width:64em){
+        font-size: var(--fs-text);
+        line-height: 24px;
+    }
+}

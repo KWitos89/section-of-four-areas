@@ -1,0 +1,14 @@
+.container {
+    margin-inline: auto;
+    max-width: 90em;
+    width: calc(100% - 2rem);
+
+
+    @media (min-width:48em) {
+        width: calc(100% - 21.125rem);
+    }
+
+    @media (min-width:64em) {
+        width: calc(100% - 19rem);
+    }
+}
